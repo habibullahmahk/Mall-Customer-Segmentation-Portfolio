@@ -27,11 +27,11 @@ def get_cluster_name(row):
     income = row['Annual_Income']
     spending = row['Spending_Score']
 
-/// Ambil nilai rata-rata income dan spending score dari seluruh populasi sebagai patokan
+   // Ambil nilai rata-rata income dan spending score dari seluruh populasi sebagai patokan
     avg_income_population = df['Annual_Income'].mean()
     avg_spending_population = df['Spending_Score'].mean()
 
-    /// Logika Penamaan (Rule Based)
+    // Logika Penamaan (Rule Based)
     if income > avg_income_population and spending > avg_spending_population:
         return 'VIP (Target)'
     elif income > avg_income_population and spending < avg_spending_population:
